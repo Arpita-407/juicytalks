@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JuicyTalks - Your Fruit Recommendation Chatbot 🍉</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ffb347, #ffcc33);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #ff6600;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    footer {
+      margin-top: 120px;
+      padding: 15px;
+      background-color: #fff8e1;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🍓 JuicyTalks</h1>
+    <p>Your Smart Fruit Recommendation Chatbot</p>
+  </header>
+
+  <div class="container">
+    <h2>Welcome to JuicyTalks!</h2>
+    <p>Chat with our bot to discover the perfect fruit for your taste, health, and mood. 🍍</p>
+    <p>Click the chat icon at the bottom right to start!</p>
+  </div>
+
+  <footer>
+    &copy; 2025 JuicyTalks. All Rights Reserved.
+  </footer>
+
+  <!-- Watson Assistant Chat Embed -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "a6754013-d2e7-464c-b585-99c156128894", // The ID of this integration.
+      region: "eu-de", // The region your integration is hosted in.
+      serviceInstanceID: "752177ce-b57f-4cfc-9116-0dbb0938b540", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+      (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
